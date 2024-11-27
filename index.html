@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClustR - LanguageNut Client</title>
+    <script src="https://kit.fontawesome.com/3412ef2576.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+        .container {
+            background-color: #2d3748;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            max-width: 800px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #63b3ed;
+            font-size: 2.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .description {
+            text-align: center;
+            color: #a0aec0;
+            margin-bottom: 1.5rem;
+        }
+        .tabs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .tab {
+            background-color: #4a5568;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e2e8f0;
+        }
+        .tab.active {
+            background-color: #2b6cb0;
+        }
+        .tab i {
+            margin-right: 0.5rem;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        pre {
+            background-color: #4a5568;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            color: #68d391;
+        }
+        .copy-btn {
+            background-color: #3182ce;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .copy-btn:hover {
+            background-color: #2c5282;
+        }
+        .copy-btn i {
+            margin-right: 0.5rem;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">ClustR</h1>
+        <p class="description">LanguageNut Client - No Installation Required</p>
+        <div class="tabs">
+            <button class="tab active" data-browser="chrome">
+                <i class="fab fa-chrome"></i>
+                Chrome
+            </button>
+            <button class="tab" data-browser="firefox">
+                <i class="fab fa-firefox"></i>
+                Firefox
+            </button>
+            <button class="tab" data-browser="safari">
+                <i class="fab fa-safari"></i>
+                Safari
+            </button>
+            <button class="tab" data-browser="edge">
+                <i class="fab fa-edge"></i>
+                Edge
+            </button>
+            <button class="tab" data-browser="brave">
+                <i class="fab fa-brave"></i>
+                Brave
+            </button>
+            <button class="tab" data-browser="opera">
+                <i class="fab fa-opera"></i>
+                Opera
+            </button>
+            <button class="tab" data-browser="operagx">
+                <i class="fab fa-opera"></i>
+                Opera GX
+            </button>
+            <button class="tab" data-browser="ie">
+                <i class="fab fa-internet-explorer"></i>
+                Internet Explorer
+            </button>
+        </div>
+        <div id="chrome" class="tab-content active">
+            <h3>Instructions for Chrome</h3>
+            <ol>
+                <li>Copy the code snippet below.</li>
+                <li>Open the browser console: Press CTRL + SHIFT + J (Windows/Linux) or CMD + OPTION + J (Mac).</li>
+                <li>Paste the code into the console and press Enter.</li>
+                <li>To close the console, press CTRL + SHIFT + J (Windows/Linux) or CMD + OPTION + J (Mac).</li>
+            </ol>
+        </div>
+        <div id="firefox" class="tab-content">
+            <h3>Instructions for Firefox</h3>
+             below.</li>
+                <li>Open the browser console: Press CTRL + SHIFT + K (Windows/Linux) or CMD + OPTION + K (Mac).</li>
+                <li>Paste the code into the console and press Enter.</li>
+                <li>To close the console, press CTRL + SHIFT + J (Windows/Linux) or CMD + OPTION + J (Mac).</li>
+            </ol>
+        </div>
+        <div id="safari" class="tab-content">
+            <h3>Instructions for Safari</h3>
+             below.</li>
+                <li>Open the browser console: Press CMD + OPTION + C. Make sure you have enabled the Develop menu in Safari preferences.</li>
+                <li>Paste the code into the console and press Enter.</li>
+                <li>To close the console, press CTRL + SHIFT + J (Windows/Linux) or CMD + OPTION + J (Mac).</li>
+            </ol>
+        </div>
+        <div id="edge" class="tab-content">
+            <h3>Instructions for Edge</h3>
+             below.</li>
+                <li>Open the browser console: Press CTRL + SHIFT + J (Windows) or CMD + OPTION + J (Mac).</li>
+                <li>If pasting is blocked, type "allow pasting" and press Enter.</li>
+                <li>Paste the code into the console and press Enter.</li>
+                <li>To close the console, press CTRL + SHIFT + J (Windows/Linux) or CMD + OPTION + J (Mac).</li>
+            </ol>
+        </div>
+        <div id="brave" class="tab-content">
+            <h3>Instructions for Brave</h3>
+             below.</li>
+                <li>Open the browser console: Press CTRL + SHIFT + J (Windows/Linux) or CMD + OPTION + J (Mac).</li>
+                <li>Paste the code into the console and press Enter.</li>
+                <li>To close the console, press CTRL + SHIFT + J (Windows/Linux) or CMD + OPTION + J (Mac).</li>
+            </ol>
+        </div>
+        <div id="opera" class="tab-content">
+            <h3>Instructions for Opera</h3>
+             below.</li>
+                <li>Open the browser console: Press CTRL + SHIFT + J (Windows/Linux) or CMD + OPTION + J (Mac).</li>
+                <li>Paste the code into the console and press Enter.</li>
+                <li>To close the console, press CTRL + SHIFT + J (Windows/Linux) or CMD + OPTION + J (Mac).</li>
+            </ol>
+        </div>
+        <div id="operagx" class="tab-content">
+            <h3>Instructions for Opera GX</h3>
+             below.</li>
+                <li>Open the browser console: Press CTRL + SHIFT + J (Windows/Linux) or CMD + OPTION + J (Mac).</li>
+                <li>Paste the code into the console and press Enter.</li>
+                <li>To close the console, press CTRL + SHIFT + J (Windows/Linux) or CMD + OPTION + J (Mac).</li>
+            </ol>
+        </div>
+        <div id="ie" class="tab-content">
+            <h3>Instructions for Internet Explorer</h3>
+             below.</li>
+                <li>Open the browser console: Press F12 to open Developer Tools, then click on the Console tab.</li>
+                <li>Paste the code into the console and press Enter.</li>
+                <li>To close the console, press F12 again.</li>
+            </ol>
+        </div>
+        <pre><code id="codeSnippet">
+fetch('https://raw.githubusercontent.com/Zepr01/ClustR/refs/heads/main/ClustrStable.js')
+  .then(response => response.text())
+  .then(code => eval(code))
+  .catch(error => console.error('Error loading the script:', error));
+        </code></pre>
+        <button id="copyBtn" class="copy-btn">
+            <i class="fas fa-copy"></i>
+            Copy Code
+        </button>
+    </div>
+
+    <script>
+        // Tab switching
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const browser = tab.getAttribute('data-browser');
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(browser).classList.add('active');
+                document.getElementById(browser).classList.add('fade-in');
+                setTimeout(() => {
+                    document.getElementById(browser).classList.remove('fade-in');
+                }, 500);
+            });
+        });
+
+        // Copy to clipboard
+        const copyBtn = document.getElementById('copyBtn');
+        const codeSnippet = document.getElementById('codeSnippet');
+
+        copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(codeSnippet.textContent.trim());
+            copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            setTimeout(() => {
+                copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copy Code';
+            }, 2000);
+        });
+
+        // Title animation
+        const title = document.getElementById('title');
+        title.addEventListener('mouseover', () => {
+            title.style.transform = 'scale(1.1)';
+            title.style.transition = 'transform 0.3s';
+        });
+        title.addEventListener('mouseout', () => {
+            title.style.transform = 'scale(1)';
+        });
+    </script>
+</body>
+</html>
