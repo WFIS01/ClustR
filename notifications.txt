@@ -1,0 +1,2 @@
+nn270225-Welcome to ClustR v2 Release 2.0.1
+nn280225-Click here if there is any news or any errors with your instance. This is the home for your ClustR instance.
